@@ -26,7 +26,7 @@ struct ContentView: View {
                 .font(.largeTitle)
             ForEach(0..<3){ r in //for each number we reach in the foreach loop we take that number and put it in  the var we use (r)
                 HStack(spacing: 10){
-                    ForEach(0..<3){ c in //for each number we reach in the foreach loop we take that number and put it in  the var we use (r)
+                    ForEach(0..<3){ c in //for each number we reach in the foreach loop we take that number and put it in  the var we use (c)
                         Button(action:
                                 {
                                     if fields [r][c].enabled
@@ -42,7 +42,7 @@ struct ContentView: View {
                                             fields[r][c].enabled = false
                                         }
                                         else
-                                        { //can use loop here too, need to check the double loops exist or i need nested loops
+                                        { //can use loop here too, nested loop (i for rows and j for columns.. i don't even need i and j)
                                             fields[0][0].enabled = false
                                             fields[0][1].enabled = false
                                             fields[0][2].enabled = false
